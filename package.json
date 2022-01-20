@@ -1,0 +1,36 @@
+{
+  "name": "simple-sftp-server",
+  "version": "0.0.0",
+  "description": "A simple SFTP server with CLI and API support",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "simple-sftp-serverr": "bin/simple-sftp-server.js"
+  },
+  "scripts": {
+    "test": "stricter-standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zazuko/simple-sftp-server.git"
+  },
+  "keywords": [
+    "server",
+    "sftp"
+  ],
+  "author": "Thomas Bergwinkl <bergi@axolotlfarm.org> (https://www.bergnet.org/people/bergi/card#me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zazuko/simple-sftp-server/issues"
+  },
+  "homepage": "https://github.com/zazuko/simple-sftp-server",
+  "dependencies": {
+    "commander": "^8.3.0",
+    "fs-extra": "^10.0.0",
+    "sftp-fs": "^0.0.7",
+    "ssh2": "^1.5.0"
+  },
+  "devDependencies": {
+    "stricter-standard": "^0.2.0"
+  }
+}
