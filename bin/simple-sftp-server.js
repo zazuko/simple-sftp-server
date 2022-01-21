@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { resolve } from 'path'
 import { Command } from 'commander/esm.mjs'
 import SftpServer from '../Server.js'
 
@@ -9,7 +10,7 @@ const program = new Command()
 program
   .option('-p, --port <port>', 'listener port', v => parseInt(v))
   .option('-k, --key-file <path>', 'path to keyfile', exampleKeyFile)
-  .option('-r, --root <path>', 'root directory')
+  .option('-r, --root <path>', 'root directory', v => resolve(v), process.cwd())
   .option('-u, --user <user>', 'user')
   .option('-p, --password <password>', 'password')
   .action(async ({ port, keyFile, root, user, password }) => {
